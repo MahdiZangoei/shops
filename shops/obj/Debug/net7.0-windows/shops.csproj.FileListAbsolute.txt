@@ -107,3 +107,15 @@ G:\Shop\shops\shops\obj\Debug\net7.0-windows\shops.pdb
 G:\Shop\shops\shops\obj\Debug\net7.0-windows\shops.genruntimeconfig.cache
 G:\Shop\shops\shops\obj\Debug\net7.0-windows\ref\shops.dll
 G:\Shop\shops\shops\obj\Debug\net7.0-windows\shops.ShowProduct.resources
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Core.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.WinForms.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\Microsoft.Web.WebView2.Wpf.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-x64\native\msalruntime.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+G:\Shop\shops\shops\bin\Debug\net7.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+G:\Shop\shops\shops\obj\Debug\net7.0-windows\shops.checkout.resources
+G:\Shop\shops\shops\obj\Debug\net7.0-windows\shops.Myaccount.resources

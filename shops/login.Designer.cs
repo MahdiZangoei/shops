@@ -137,7 +137,7 @@ namespace shops
             MinimumSize = new System.Drawing.Size(817, 511);
             Name = "login";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "صفحه ورود";
             Load += login_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -69,10 +69,11 @@ namespace shops
             button1.BackColor = System.Drawing.Color.LimeGreen;
             button1.Location = new System.Drawing.Point(34, 332);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(145, 33);
+            button1.Size = new System.Drawing.Size(109, 33);
             button1.TabIndex = 3;
-            button1.Text = "افزودن به سبد خرید";
+            button1.Text = "خرید";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // richTextBox1
             // 

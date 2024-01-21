@@ -27,6 +27,36 @@ namespace shops
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+
+/*            string User_Name = ID;
+
+            try
+            {
+                // اتصال به دیتابیس
+
+                Program.connection.Open();
+
+                // اجرای کوئری برای چک کردن نام کاربر
+                string query = "SELECT Name FROM Users WHERE Username = @username";
+                SqlCommand command = new SqlCommand(query, Program.connection);
+                command.Parameters.AddWithValue("@username", User_Name);
+
+
+
+
+                // اجرای کوئری و دریافت نتیجه
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Read();
+                string Name = reader["Name"].ToString();
+                string welcomeText = " سلام " + Name + " عزیز ";
+                label1.Text = welcomeText;
+
+                Program.connection.Close();
+            }
+            catch { }*/
+
+
+
             Task.Run(() => { LoadDataWidthoutFIlter(); });
         }
 
@@ -42,6 +72,11 @@ namespace shops
             sda.Fill(dt);
             Program.connection.Close();
             LoadProducts(dt);
+
+
+
+
+
         }
         public void LoadProducts(DataTable Table)
         {
@@ -95,7 +130,7 @@ namespace shops
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
     }

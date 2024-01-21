@@ -190,7 +190,7 @@ namespace shops
             tabPage3.Padding = new System.Windows.Forms.Padding(3);
             tabPage3.Size = new System.Drawing.Size(918, 364);
             tabPage3.TabIndex = 0;
-            tabPage3.Text = "لیست محصولات";
+            tabPage3.Text = "لیست کد تخفیف";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -285,7 +285,7 @@ namespace shops
             tabPage9.Padding = new System.Windows.Forms.Padding(3);
             tabPage9.Size = new System.Drawing.Size(918, 364);
             tabPage9.TabIndex = 1;
-            tabPage9.Text = "افزودن محصول";
+            tabPage9.Text = "افزودن کد تخفیف";
             tabPage9.UseVisualStyleBackColor = true;
             // 
             // label23
@@ -330,6 +330,7 @@ namespace shops
             textBox15.Size = new System.Drawing.Size(293, 25);
             textBox15.TabIndex = 0;
             textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            textBox15.TextChanged += textBox15_TextChanged;
             // 
             // tabPage2
             // 

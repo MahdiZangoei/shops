@@ -78,7 +78,9 @@ namespace shops
                     }
                     else
                     {
+
                         HomePage.Show();
+                        this.Hide();
                     }
                 }
 
@@ -117,14 +119,17 @@ namespace shops
                     if (roll == "admin")
                     {
 
-
-
+                        paneladmin sp = new paneladmin(username);
+                        sp.ShowDialog();
                         paneladmin.Show();
-                        //this.Hide();
+
+
                     }
                     else
                     {
+
                         HomePage.Show();
+                        this.Hide();
                     }
 
 

@@ -30,6 +30,8 @@ namespace shops
         private void InitializeComponent()
         {
             panel1 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            button2 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
@@ -38,6 +40,8 @@ namespace shops
             // panel1
             // 
             panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.Location = new System.Drawing.Point(0, 0);
@@ -45,14 +49,31 @@ namespace shops
             panel1.Size = new System.Drawing.Size(1138, 106);
             panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(1083, 34);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(43, 17);
+            label1.TabIndex = 2;
+            label1.Text = "label1";
+            // 
+            // button2
+            // 
+            button2.Location = new System.Drawing.Point(104, 12);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(124, 39);
+            button2.TabIndex = 1;
+            button2.Text = "حساب کاربری";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
-            button1.Dock = System.Windows.Forms.DockStyle.Right;
-            button1.Location = new System.Drawing.Point(1042, 0);
+            button1.Location = new System.Drawing.Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(96, 106);
+            button1.Size = new System.Drawing.Size(86, 39);
             button1.TabIndex = 0;
-            button1.Text = "Return";
+            button1.Text = "خروج";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -78,6 +99,7 @@ namespace shops
             Text = "HomePage";
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -86,5 +108,7 @@ namespace shops
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -73,8 +73,11 @@ namespace shops
 
 
 
-            // اتصال به دیتابیس
             string User_Name = ID;
+
+
+            // اتصال به دیتابیس
+
             Program.connection.Open();
 
             // اجرای کوئری برای چک کردن نام کاربر
@@ -106,6 +109,21 @@ namespace shops
             {
                 string name = readerr["Name"].ToString();
                 comboBox1.Items.Add(name);
+            }
+            Program.connection.Close();
+            
+            
+            //خواندن محصولات از دیتابیس 
+            Program.connection.Open();
+            string query3 = "SELECT code FROM copon";
+            SqlCommand command3 = new SqlCommand(query3, Program.connection);
+
+            SqlDataReader reader3 = command3.ExecuteReader();
+
+            while (reader3.Read())
+            {
+                string code_name = reader3["code"].ToString();
+                comboBox3.Items.Add(code_name);
             }
             Program.connection.Close();
 
@@ -417,18 +435,17 @@ namespace shops
 
         private void button15_Click(object sender, EventArgs e)
         {
-            string Code_mame = textBox15.Text;
-            int Code_percent = int.Parse(textBox14.Text);
+            string Code_name = textBox15.Text;
+            string Code_percent = textBox14.Text;
 
 
             Program.connection.Open();
-            string query = "INSERT INTO copon (code,percent) VALUES ('" + Code_mame + "','" + Code_percent + "')";
+            string query = "INSERT INTO copon (code,percent) VALUES ('" + Code_name + "','" + Code_percent + "')";
             SqlCommand command = new SqlCommand(query, Program.connection);
             command.ExecuteNonQuery();
             Program.connection.Close();
             MessageBox.Show("کد تخفیف اضافه شد.");
-            textBoxprudactname.Text = textBoxprudactprice.Text = textBoxprudactdescription.Text = "";
-            comboBox3.Items.Add(Code_mame);
+            comboBox3.Items.Add(Code_name);
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -444,27 +461,60 @@ namespace shops
 
         private void button12_Click(object sender, EventArgs e)
         {
+            /*
+                        button11.Visible = true;
+                        label20.Visible = true;
+                        label19.Visible = true;
+                        textBox11.Visible = true;
+                        textBox12.Visible = true;
 
-            button11.Visible = true;
-            label20.Visible = true;
-            label19.Visible = true;
-            textBox11.Visible = true;
-            textBox12.Visible = true;
+
+
+                        // دریافت اسم 
+                        string code_name = comboBox3.SelectedItem.ToString();
+
+                        // اتصال به دیتابیس
+
+                        Program.connection.Open();
+
+                        // ایجاد کوئری
+                        var query = new SqlCommand("SELECT percent FROM copon WHERE code = @code_name", Program.connection);
+
+                        // قرار دادن مقادیر در کوئری
+                        query.Parameters.AddWithValue("@code_name", code_name);
+
+                        // اجرای کوئری
+                        var reader = query.ExecuteReader();
+
+                        // در صورت وجود نتیجه
+                        if (reader.Read())
+                        {
+                            string percent = reader["percent"].ToString();
 
 
 
-            // دریافت اسم 
-            string code_name = comboBox3.SelectedItem.ToString();
+                            textBox11.Text = percent;
+
+
+                        }
+                        Program.connection.Close();*/
+
+
+
+
+
+            // دریافت اسم محصول
+            string codename = comboBox3.SelectedItem.ToString();
 
             // اتصال به دیتابیس
 
             Program.connection.Open();
 
             // ایجاد کوئری
-            var query = new SqlCommand("SELECT percent FROM copon WHERE code = @code_name", Program.connection);
+            var query = new SqlCommand("SELECT percent FROM copon WHERE code = @codeName", Program.connection);
 
             // قرار دادن مقادیر در کوئری
-            query.Parameters.AddWithValue("@code_name", code_name);
+            query.Parameters.AddWithValue("@codeName", codename);
 
             // اجرای کوئری
             var reader = query.ExecuteReader();
@@ -472,11 +522,18 @@ namespace shops
             // در صورت وجود نتیجه
             if (reader.Read())
             {
+                // دریافت مقدار Price
                 string percent = reader["percent"].ToString();
 
 
 
+                // ذخیره مقادیر در متغیرها
+
+
+
+                textBox12.Text = comboBox3.SelectedItem.ToString();
                 textBox11.Text = percent;
+
 
 
             }
@@ -513,6 +570,11 @@ namespace shops
             textBox11.Visible = false;
             textBox12.Visible = false;
 
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using shops.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +67,16 @@ namespace shops
                     break;
                 }
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form ch = new checkout(ID);
+            ch.ShowDialog();
+            ch.Show();
+
+
 
         }
     }
