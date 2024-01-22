@@ -32,25 +32,6 @@ namespace shops
             button5 = new System.Windows.Forms.Button();
             button6 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
-            tabPage4 = new System.Windows.Forms.TabPage();
-            label18 = new System.Windows.Forms.Label();
-            tabControl4 = new System.Windows.Forms.TabControl();
-            tabPage3 = new System.Windows.Forms.TabPage();
-            button11 = new System.Windows.Forms.Button();
-            label19 = new System.Windows.Forms.Label();
-            label20 = new System.Windows.Forms.Label();
-            textBox11 = new System.Windows.Forms.TextBox();
-            textBox12 = new System.Windows.Forms.TextBox();
-            button12 = new System.Windows.Forms.Button();
-            button13 = new System.Windows.Forms.Button();
-            label21 = new System.Windows.Forms.Label();
-            comboBox3 = new System.Windows.Forms.ComboBox();
-            tabPage9 = new System.Windows.Forms.TabPage();
-            label23 = new System.Windows.Forms.Label();
-            label24 = new System.Windows.Forms.Label();
-            button15 = new System.Windows.Forms.Button();
-            textBox14 = new System.Windows.Forms.TextBox();
-            textBox15 = new System.Windows.Forms.TextBox();
             tabPage2 = new System.Windows.Forms.TabPage();
             label17 = new System.Windows.Forms.Label();
             textBox8 = new System.Windows.Forms.TextBox();
@@ -96,10 +77,6 @@ namespace shops
             textBoxprudactprice = new System.Windows.Forms.TextBox();
             textBoxprudactname = new System.Windows.Forms.TextBox();
             tabControl1 = new System.Windows.Forms.TabControl();
-            tabPage4.SuspendLayout();
-            tabControl4.SuspendLayout();
-            tabPage3.SuspendLayout();
-            tabPage9.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage1.SuspendLayout();
             tabControl2.SuspendLayout();
@@ -141,196 +118,6 @@ namespace shops
             label1.Text = "کاربر عزیز خوش آمدید";
             label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             label1.Click += label1_Click;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(label18);
-            tabPage4.Controls.Add(tabControl4);
-            tabPage4.Location = new System.Drawing.Point(4, 26);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            tabPage4.Size = new System.Drawing.Size(932, 428);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "کد تخفیف";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new System.Drawing.Point(450, 3);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(62, 17);
-            label18.TabIndex = 4;
-            label18.Text = "کد تخفیف";
-            // 
-            // tabControl4
-            // 
-            tabControl4.Controls.Add(tabPage3);
-            tabControl4.Controls.Add(tabPage9);
-            tabControl4.Location = new System.Drawing.Point(3, 34);
-            tabControl4.Name = "tabControl4";
-            tabControl4.RightToLeftLayout = true;
-            tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new System.Drawing.Size(926, 394);
-            tabControl4.TabIndex = 1;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(button11);
-            tabPage3.Controls.Add(label19);
-            tabPage3.Controls.Add(label20);
-            tabPage3.Controls.Add(textBox11);
-            tabPage3.Controls.Add(textBox12);
-            tabPage3.Controls.Add(button12);
-            tabPage3.Controls.Add(button13);
-            tabPage3.Controls.Add(label21);
-            tabPage3.Controls.Add(comboBox3);
-            tabPage3.Location = new System.Drawing.Point(4, 26);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            tabPage3.Size = new System.Drawing.Size(918, 364);
-            tabPage3.TabIndex = 0;
-            tabPage3.Text = "لیست کد تخفیف";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            button11.Location = new System.Drawing.Point(506, 208);
-            button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(235, 37);
-            button11.TabIndex = 10;
-            button11.Text = "ویرایش";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += button11_Click;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new System.Drawing.Point(771, 166);
-            label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(39, 17);
-            label19.TabIndex = 8;
-            label19.Text = "درصد";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(768, 134);
-            label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(62, 17);
-            label20.TabIndex = 7;
-            label20.Text = "کد تخفیف";
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new System.Drawing.Point(506, 160);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new System.Drawing.Size(235, 25);
-            textBox11.TabIndex = 5;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new System.Drawing.Point(506, 128);
-            textBox12.Name = "textBox12";
-            textBox12.ReadOnly = true;
-            textBox12.Size = new System.Drawing.Size(235, 25);
-            textBox12.TabIndex = 4;
-            // 
-            // button12
-            // 
-            button12.Location = new System.Drawing.Point(341, 46);
-            button12.Name = "button12";
-            button12.Size = new System.Drawing.Size(83, 25);
-            button12.TabIndex = 3;
-            button12.Text = "ویرایش";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
-            // 
-            // button13
-            // 
-            button13.Location = new System.Drawing.Point(228, 46);
-            button13.Name = "button13";
-            button13.Size = new System.Drawing.Size(83, 25);
-            button13.TabIndex = 2;
-            button13.Text = "حذف";
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += button13_Click;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new System.Drawing.Point(771, 49);
-            label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(100, 17);
-            label21.TabIndex = 1;
-            label21.Text = "انتخاب کد تخفیف";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new System.Drawing.Point(467, 46);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new System.Drawing.Size(295, 25);
-            comboBox3.TabIndex = 0;
-            // 
-            // tabPage9
-            // 
-            tabPage9.Controls.Add(label23);
-            tabPage9.Controls.Add(label24);
-            tabPage9.Controls.Add(button15);
-            tabPage9.Controls.Add(textBox14);
-            tabPage9.Controls.Add(textBox15);
-            tabPage9.Location = new System.Drawing.Point(4, 26);
-            tabPage9.Name = "tabPage9";
-            tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            tabPage9.Size = new System.Drawing.Size(918, 364);
-            tabPage9.TabIndex = 1;
-            tabPage9.Text = "افزودن کد تخفیف";
-            tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Location = new System.Drawing.Point(783, 85);
-            label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(79, 17);
-            label23.TabIndex = 5;
-            label23.Text = "درصد تخفیف";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new System.Drawing.Point(783, 53);
-            label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(62, 17);
-            label24.TabIndex = 4;
-            label24.Text = "کد تخفیف";
-            // 
-            // button15
-            // 
-            button15.Location = new System.Drawing.Point(433, 134);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(293, 44);
-            button15.TabIndex = 3;
-            button15.Text = "ثبت کد تخفیف";
-            button15.UseVisualStyleBackColor = true;
-            button15.Click += button15_Click;
-            // 
-            // textBox14
-            // 
-            textBox14.Location = new System.Drawing.Point(433, 77);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new System.Drawing.Size(293, 25);
-            textBox14.TabIndex = 1;
-            // 
-            // textBox15
-            // 
-            textBox15.Location = new System.Drawing.Point(433, 45);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new System.Drawing.Size(293, 25);
-            textBox15.TabIndex = 0;
-            textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            textBox15.TextChanged += textBox15_TextChanged;
             // 
             // tabPage2
             // 
@@ -773,7 +560,6 @@ namespace shops
             tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage4);
             tabControl1.Location = new System.Drawing.Point(12, 43);
             tabControl1.Name = "tabControl1";
             tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -794,13 +580,6 @@ namespace shops
             Name = "paneladmin";
             Text = "پنل مدیریت";
             Load += paneladmin_Load;
-            tabPage4.ResumeLayout(false);
-            tabPage4.PerformLayout();
-            tabControl4.ResumeLayout(false);
-            tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
-            tabPage9.ResumeLayout(false);
-            tabPage9.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabPage1.ResumeLayout(false);
@@ -820,7 +599,6 @@ namespace shops
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage1;
@@ -849,24 +627,6 @@ namespace shops
         private System.Windows.Forms.TextBox textBoxprudactprice;
         private System.Windows.Forms.TextBox textBoxprudactname;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button Edit_user;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

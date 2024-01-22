@@ -5,29 +5,46 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static Azure.Core.HttpHeader;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using shops;
+using Microsoft.Identity.Client.NativeInterop;
+using System.Net.Http;
 
 namespace shops
 {
     public partial class checkout : Form
     {
+
+
+
         public checkout()
         {
+
             InitializeComponent();
+
+
+
         }
         public checkout(int Id)
         {
             InitializeComponent();
+
             ID = Id;
 
 
         }
         public int ID { get; set; }
+
+
         private void LoadDataWidthoutFIlter()
         {
             string command = $"SELECT * FROM products";
@@ -55,9 +72,9 @@ namespace shops
 
                     label1.Text = name;
                     label2.Text = Price;
-                    label4.Text = Price+"تومان";
+                    label4.Text = Price + "تومان";
                     richTextBox1.Text = Information;
-                    
+
 
                     try
                     {
@@ -80,33 +97,77 @@ namespace shops
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int price = int.Parse(label2.Text) ;
+            int price = int.Parse(label2.Text);
             int totall = int.Parse(textBox2.Text);
-            string copon = textBox1.Text;
 
-            if (copon == "")
-            {
-                int percent = 0;
-            }
-            else
-            {
-                //خواندن محصولات از دیتابیس 
-                Program.connection.Open();
-                string query1 = "SELECT code FROM copon";
-                SqlCommand command1 = new SqlCommand(query1, Program.connection);
-
-                SqlDataReader readerr = command1.ExecuteReader();
-                readerr.Read();
-                string string_percent = readerr["percent"].ToString();
-                int percent = int.Parse(string_percent);
-                MessageBox.Show(string_percent);
-                    
-                Program.connection.Close();
-            }
-            int sum = price*totall;
+            int sum = price * totall;
 
             label4.Text = sum + "تومان";
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name = label1.Text;
+            int price = int.Parse(label2.Text);
+            int totall = int.Parse(textBox2.Text);
+            int sum = price * totall;
+            string address = richTextBox2.Text;
+            string num = textBox1.Text;
+
+
+
+
+            string text = $@"سلام
+
+فاکتور خرید شما به شرح زیر میباشد:
+نام کالا :‌ {name}
+قیمت خرید : {price.ToString()} 
+تعداد : {totall.ToString()} 
+جمع کل :‌ {sum.ToString()} 
+
+
+آدرس :‌ {address}
+شماره تماس :‌ {num}
+
+وضعیت :‌پرداخت شده";
+
+
+            // ساخت یک httpclient
+            HttpClient client = new HttpClient();
+            string subemail = "فاکتور پرداخت مشتری";
+            // تنظیم کردن لینک درخواست
+            string url = $"https://mahdizangoei.ir/api/send-email.php?to_email=mahdizangoei1@gmail.com&email_subject={subemail}&text_email={text}";
+
+
+            // ارسال درخواست
+            HttpResponseMessage response = client.GetAsync(url).Result;
+
+            // برسی وضعیت درخواست
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                // دریافت ادرس دسکتاپ
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                // ساخت یک فایل txt در دسکتاپ
+                StreamWriter writer = new StreamWriter(Path.Combine(desktopPath, "output.txt"));
+
+                // نوشتن در فایل
+                writer.Write(text);
+
+                // بستن فایل
+                writer.Close();
+
+                MessageBox.Show("فاکتور در دسکتاپ شما ذخیره شد.");
+
+                this.Close();
+            }
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

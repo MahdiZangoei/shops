@@ -17,8 +17,8 @@ namespace shops
         [STAThread]
         static void Main()
         {
-            //connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + Application.StartupPath + @"Database.mdf; Integrated Security = True");
-            connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = G:\Shop\shops\shops\Database.mdf; Integrated Security = True");
+            connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + Application.StartupPath + @"Database.mdf; Integrated Security = True");
+            //connection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = G:\Shop\shops\shops\Database.mdf; Integrated Security = True");
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

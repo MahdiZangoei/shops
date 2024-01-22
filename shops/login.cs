@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using shops.Controls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace shops
 {
@@ -33,6 +33,13 @@ namespace shops
             InitializeComponent();
 
         }
+        public string getmyusername()
+        {
+            return textBox1.Text;
+
+        }
+
+
 
 
         private string GetUserPassRoll(string username, string password)
@@ -52,12 +59,13 @@ namespace shops
 
             return "";
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             
             // دریافت یوزنیم و پسورد از فرم
             string username = textBox1.Text;
             string password = textBox2.Text;
+            getmyusername();
             if (login_otp == false)
             {
 
@@ -70,7 +78,6 @@ namespace shops
 
                     // لاگین موفقیت‌آمیز
                     if(roll == "admin") {
-
                         paneladmin sp = new paneladmin(username);
                         sp.ShowDialog();
 
@@ -163,26 +170,25 @@ namespace shops
         private void login_Load(object sender, EventArgs e)
         {
 
+
         }
         public static string GenerateOtp(int x)
         {
-            
-            // Create a random number generator
+
+            // ایجاد یک تولیدکننده اعداد تصادفی
             Random random = new Random();
 
-            // Generate a random number between 0 and 9999
+            // تولید یک عدد تصادفی بین 0 و 9999
             int password = random.Next(10000);
 
-            // Convert the number to a 4-digit string
+            
             string passwordString = password.ToString();
 
-            // Pad the string with zeros to make it 4 digits long
             while (passwordString.Length < x)
             {
                 passwordString = "0" + passwordString;
             }
 
-            // Return the password
             return passwordString;
         }
 
@@ -214,17 +220,12 @@ namespace shops
 
 
 
-
-
-
-
-
             code = GenerateOtp(4);
             // ساخت یک httpclient
             HttpClient client = new HttpClient();
 
             // تنظیم کردن لینک درخواست
-            string url = "https://mahdizangoei.ir/api/send-sms.php?code="+code+"&to="+ Phone_num + "&pid=lcz40t6ca7wem8c&type=sendd";
+            string url = "https://mahdizangoei.ir/api/send-sms.php?code="+code+"&to="+ Phone_num + "&pid=lcz40t6ca7wem8c&type=send";
 
 
             // ارسال درخواست
@@ -235,8 +236,7 @@ namespace shops
             {
                 // درخواست موفقیت امیز بود
                 MessageBox.Show("رمز یکبار مصرف برای شما ارسال شد \n لطفا در باکس بالا وارد کنید.");
-                MessageBox.Show(Phone_num);
-                MessageBox.Show(code);
+
                 label2.Text = "کد ارسال شده";
                 login_otp = true;
             }

@@ -18,7 +18,7 @@ namespace shops
         {
             InitializeComponent();
         }
-        public ShowProduct(int Id)
+        public ShowProduct(int Id )
         {
             InitializeComponent();
             ID = Id;
@@ -45,6 +45,7 @@ namespace shops
         }
         public void LoadProducts(DataTable Table)
         {
+            
             foreach (DataRow row in Table.Rows)
             {
                 string Id = row["Id"].ToString();
@@ -74,7 +75,7 @@ namespace shops
         {
             Form ch = new checkout(ID);
             ch.ShowDialog();
-            ch.Show();
+            //ch.Show();
 
 
 

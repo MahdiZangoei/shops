@@ -35,11 +35,13 @@
             button1 = new System.Windows.Forms.Button();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
             button2 = new System.Windows.Forms.Button();
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
+            richTextBox2 = new System.Windows.Forms.RichTextBox();
+            label8 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -84,17 +86,18 @@
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(16, 376);
+            button1.Location = new System.Drawing.Point(12, 413);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(83, 25);
             button1.TabIndex = 10;
             button1.Text = "خرید";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(712, 256);
+            label3.Location = new System.Drawing.Point(722, 223);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(50, 17);
             label3.TabIndex = 11;
@@ -103,18 +106,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(574, 256);
+            label4.Location = new System.Drawing.Point(576, 223);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(43, 17);
             label4.TabIndex = 12;
             label4.Text = "label4";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new System.Drawing.Point(413, 183);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(110, 25);
-            textBox1.TabIndex = 13;
             // 
             // textBox2
             // 
@@ -137,7 +133,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(722, 183);
+            label5.Location = new System.Drawing.Point(728, 182);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(37, 17);
             label5.TabIndex = 16;
@@ -146,23 +142,51 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(529, 186);
+            label6.Location = new System.Drawing.Point(725, 266);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(62, 17);
+            label6.Size = new System.Drawing.Size(40, 17);
             label6.TabIndex = 17;
-            label6.Text = "کد تخفیف";
-            label6.Click += label6_Click;
+            label6.Text = ":آدرس";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            richTextBox2.Location = new System.Drawing.Point(167, 266);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            richTextBox2.Size = new System.Drawing.Size(511, 63);
+            richTextBox2.TabIndex = 18;
+            richTextBox2.Text = "";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(688, 355);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(83, 17);
+            label8.TabIndex = 19;
+            label8.Text = ":شماره موبایل";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(503, 352);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(175, 25);
+            textBox1.TabIndex = 20;
             // 
             // checkout
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(textBox1);
+            Controls.Add(label8);
+            Controls.Add(richTextBox2);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(button2);
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(button1);
@@ -187,10 +211,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
